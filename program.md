@@ -4,10 +4,11 @@ The workshop will take place {{site.timestring}} each day from
 {{site.firstdate}} through {{site.lastdate}}.
 
 {% if site.attendance == "in-person" %}
-   {% site.location %}
+   {% if site.location %}
    The workshop will be held **in-person** at
-   {% if site.loclink %}<a href="{{site.loclink}}">{%endif}
-   {{ site.location }}{% if site.loclink %}</a>{%endif}.
+   {% if site.loclink %}<a href="{{site.loclink}}">{% endif %}
+   {{ site.location }}
+   {% if site.loclink %}</a>{% endif %}.
    {% else %}
    The workshop will be held **in-person**. Participants will be sent
    the workshop address upon registration.
