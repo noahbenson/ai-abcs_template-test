@@ -4,35 +4,35 @@ The workshop will take place {{site.timestring}} each day from
 {{site.firstdate}} through {{site.lastdate}}.
 
 {% if site.attendance == 'in-person' %}
-   {% if site.location %}
-     The workshop will be held **in-person** at
-     {% if site.loclink %}
-       <a href="{{site.loclink}}">{{ site.location }}</a>
-     {% else %}
-       {{ site.location }}
-     {% endif %}.
-   {% else %}
-     The workshop will be held **in-person**. Participants will be sent
-     the workshop address upon registration.
-   {% endif %}
+{% if site.location %}
+The workshop will be held **in-person** at
+{% if site.loclink %}
+[{{ site.location }}]({{ site.loclink }}).
+{% else %}
+{{ site.location }}.
+{% endif %}
+{% else %}
+The workshop will be held **in-person**. Participants will be sent
+the workshop address upon registration.
+{% endif %}
 {% elsif site.attendance == 'online' %}
-   The workshop will be held **online** over Zoom. Participants will be
-   sent a workshop Zoom link upon registration.
+The workshop will be held **online** over Zoom. Participants will be
+sent a workshop Zoom link upon registration.
 {% elsif site.attendance == 'hybrid' %}
-   The workshop will be held both **online** and **in-person**; you must
-   register for one or the other.
-   {% if site.location %}
-      The in-person site of the workshop will be held at
-      {% if site.loclink %}
-         <a href="{{site.loclink}}">{{ site.location }}</a>
-      {% else %}
-         {{ site.location }}.
-      {%endif}
-   {% else %}
-      In-person participants will be sent the workshop address upon
-      registration.
-   {% endif %}
-   Online attendees will be sent a Zoom link upon registration.
+The workshop will be held both **online** and **in-person**; you must
+register for one or the other.
+{% if site.location %}
+The in-person site of the workshop will be held at
+{% if site.loclink %}
+[{{ site.location }}]({{ site.loclink }}).
+{% else %}
+{{ site.location }}.
+{% endif %}
+{% else %}
+In-person participants will be sent the workshop address upon
+registration.
+{% endif %}
+Online attendees will be sent a Zoom link upon registration.
 {% endif %}
 
 Each day of the workshop will focus on a different topics. These topics are
