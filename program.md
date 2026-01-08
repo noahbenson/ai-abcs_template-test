@@ -6,7 +6,7 @@ The workshop will take place {{site.timestring}} each day from
 {% if site.attendance == 'in-person' %}
    {% if site.location %}
      The workshop will be held **in-person** at
-     {% if site.loclink %}{% endif %}
+     {% if site.loclink %}
        <a href="{{site.loclink}}">{{ site.location }}</a>
      {% else %}
        {{ site.location }}
