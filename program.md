@@ -5,13 +5,15 @@ The workshop will take place {{site.timestring}} each day from
 
 {% if site.attendance == 'in-person' %}
    {% if site.location %}
-   The workshop will be held **in-person** at
-   {% if site.loclink %}<a href="{{site.loclink}}">{% endif %}
-   {{ site.location }}
-   {% if site.loclink %}</a>{% endif %}.
+     The workshop will be held **in-person** at
+     {% if site.loclink %}{% endif %}
+       <a href="{{site.loclink}}">{{ site.location }}</a>
+     {% else %}
+       {{ site.location }}
+     {% endif %}.
    {% else %}
-   The workshop will be held **in-person**. Participants will be sent
-   the workshop address upon registration.
+     The workshop will be held **in-person**. Participants will be sent
+     the workshop address upon registration.
    {% endif %}
 {% elsif site.attendance == 'online' %}
    The workshop will be held **online** over Zoom. Participants will be
