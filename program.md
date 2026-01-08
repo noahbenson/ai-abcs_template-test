@@ -6,11 +6,7 @@ The workshop will take place {{site.timestring}} each day from
 {% if site.attendance == 'in-person' %}
 {% if site.location %}
 The workshop will be held **in-person** at
-{% if site.loclink %}
-[{{ site.location }}]({{ site.loclink }}).
-{% else %}
-{{ site.location }}.
-{% endif %}
+{% if site.loclink %}[{{ site.location }}]({{ site.loclink }}){% else %}{{ site.location }}{% endif %}.
 {% else %}
 The workshop will be held **in-person**. Participants will be sent
 the workshop address upon registration.
@@ -23,11 +19,7 @@ The workshop will be held both **online** and **in-person**; you must
 register for one or the other.
 {% if site.location %}
 The in-person site of the workshop will be held at
-{% if site.loclink %}
-[{{ site.location }}]({{ site.loclink }}).
-{% else %}
-{{ site.location }}.
-{% endif %}
+{% if site.loclink %}[{{ site.location }}]({{ site.loclink }}){% else %}{{ site.location }}{% endif %}.
 {% else %}
 In-person participants will be sent the workshop address upon
 registration.
