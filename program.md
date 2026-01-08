@@ -3,7 +3,7 @@
 The workshop will take place {{site.timestring}} each day from
 {{site.firstdate}} through {{site.lastdate}}.
 
-{% if site.attendance == "in-person" %}
+{% if site.attendance == 'in-person' %}
    {% if site.location %}
    The workshop will be held **in-person** at
    {% if site.loclink %}<a href="{{site.loclink}}">{% endif %}
@@ -13,10 +13,10 @@ The workshop will take place {{site.timestring}} each day from
    The workshop will be held **in-person**. Participants will be sent
    the workshop address upon registration.
    {% endif %}
-{% elsif site.attendance == "online" %}
+{% elsif site.attendance == 'online' %}
    The workshop will be held **online** over Zoom. Participants will be
    sent a workshop Zoom link upon registration.
-{% elsif site.attendance == "hybrid %}
+{% elsif site.attendance == 'hybrid' %}
    The workshop will be held both **online** and **in-person**; you must
    register for one or the other.
    {% if site.location %}
